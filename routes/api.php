@@ -18,6 +18,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+/**
+ * endpoints to get access from the front end application
+ * with its authentication
+ */
 Route::post('/register', 'Auth\RegisterController@register');
 Route::post('/login', 'Auth\LoginController@login');
 Route::post('/logout', 'Auth\LoginController@logout')->middleware('auth:api');

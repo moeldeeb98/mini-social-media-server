@@ -25,7 +25,6 @@ class FormPostRequest extends FormRequest
     {
         return [
             'desc' => 'required|string',
-            'user_id' => 'integer|required'
         ];
     }
 }
